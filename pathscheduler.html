@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download PG PathScheduler - Pathexor</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -16,25 +16,31 @@
     <div class="ambient-glow secondary"></div>
 
     <div class="container">
-        <!-- Navigation -->
-        <nav class="navbar fade-in-up">
-            <a href="index.html" class="brand">
-                <img src="assets/logo.png" alt="Pathexor Logo" style="height: 32px; width: auto; border-radius: 6px;">
-                Pathexor
-            </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="pathscheduler.html" class="active">PG PathScheduler</a>
+        <!-- Simple Navigation -->
+        <nav class="navbar-modern fade-in-up">
+            <div class="nav-container">
+                <a href="index.html" class="nav-back-link">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+
+                <div class="brand">
+                    <img src="assets/pathscheduler_logo.png" alt="PathScheduler Logo">
+                    <span>PG PathScheduler</span>
+                </div>
+
+                <!-- Empty spacer for flexbox balance -->
+                <div style="width: 120px;"></div>
             </div>
         </nav>
 
         <!-- App Hero -->
-        <section class="hero" style="min-height: 60vh; padding-top: 2rem;">
+        <section class="hero" style="min-height: 70vh; padding-top: 4rem;">
             <div class="hero-content">
                 <div class="fade-in-up delay-100">
                     <span
-                        style="color: var(--secondary-color); font-weight: 600; letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase;">Available
-                        Now</span>
+                        style="color: var(--secondary-color); font-weight: 600; letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase;">
+                        Available Now
+                    </span>
                 </div>
                 <h1 class="fade-in-up delay-200">
                     PG <span class="gradient-text-primary">PathScheduler</span>
@@ -45,34 +51,30 @@
                 </p>
 
                 <!-- Download Grid -->
-                <div class="cards-wrapper fade-in-up delay-300" style="margin-top: 3rem;">
-                    <div class="download-grid">
+                <div class="download-grid fade-in-up delay-300" style="margin-top: 3rem;">
+                    <!-- Web Card -->
+                    <div class="glass-card download-option">
+                        <i class="fa-solid fa-globe platform-icon" style="color: #60a5fa;"></i>
+                        <h3>Web App</h3>
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Access instantly from any browser.</p>
+                        <a href="https://pathscheduler.pathexor.in/" class="btn btn-secondary">Launch Web</a>
+                    </div>
 
-                        <!-- Web Card -->
-                        <div class="glass-card download-option">
-                            <i class="fa-solid fa-globe platform-icon" style="color: #60a5fa;"></i>
-                            <h3>Web App</h3>
-                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Access instantly from any browser.</p>
-                            <a href="https://pathscheduler.pathexor.in/" class="btn btn-secondary">Launch Web</a>
-                        </div>
+                    <!-- Android Card -->
+                    <div class="glass-card download-option"
+                        style="border-color: rgba(99, 102, 241, 0.4); background: rgba(99, 102, 241, 0.05);">
+                        <i class="fa-brands fa-android platform-icon" style="color: #4ade80;"></i>
+                        <h3>Android</h3>
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Download APK for your device.</p>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download</a>
+                    </div>
 
-                        <!-- Android Card -->
-                        <div class="glass-card download-option"
-                            style="border-color: rgba(99, 102, 241, 0.4); background: rgba(99, 102, 241, 0.05);">
-                            <i class="fa-brands fa-android platform-icon" style="color: #4ade80;"></i>
-                            <h3>Android</h3>
-                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Download APK for your device.</p>
-                            <a href="#" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download</a>
-                        </div>
-
-                        <!-- iOS Card -->
-                        <div class="glass-card download-option">
-                            <i class="fa-brands fa-apple platform-icon" style="color: #ffffff;"></i>
-                            <h3>iOS</h3>
-                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Join the TestFlight beta.</p>
-                            <a href="#" class="btn btn-secondary">Coming Soon</a>
-                        </div>
-
+                    <!-- iOS Card -->
+                    <div class="glass-card download-option">
+                        <i class="fa-brands fa-apple platform-icon" style="color: #ffffff;"></i>
+                        <h3>iOS</h3>
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Join the TestFlight beta.</p>
+                        <a href="#" class="btn btn-secondary">Coming Soon</a>
                     </div>
                 </div>
             </div>
@@ -105,6 +107,18 @@
             <p>&copy; 2025 Pathexor. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+        // Navbar Scroll Effect
+        const navbar = document.querySelector('.navbar-modern');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 
 </html>
