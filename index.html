@@ -68,6 +68,9 @@
     <div class="ambient-glow"></div>
     <div class="ambient-glow secondary"></div>
 
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
     <div class="container">
         <!-- Navigation -->
         <nav class="navbar-modern fade-in-up">
@@ -94,24 +97,28 @@
         <section class="hero">
             <img src="assets/pathexor_logo.png" alt="" class="hero-watermark">
 
-            <div class="hero-content">
-                <div class="fade-in-up delay-100">
-                    <span class="hero-brand-title">Pathexor</span>
-                </div>
-                <h1 class="fade-in-up delay-200" style="font-size: 2rem; margin-top: -1rem;">
-                    Advancing Medicine Through <br>
-                    <span class="gradient-text-primary">Intelligent Tools</span>
-                </h1>
-                <p class="fade-in-up delay-300">
-                    Our mission is simple: reduce friction in medical workflows today, and introduce AI-driven
-                    intelligence responsibly tomorrow.
-                </p>
+            <div class="hero-container hero-centered">
+                <div class="hero-content">
+                    <div class="fade-in-up delay-100">
+                        <span class="hero-brand-title">Pathexor</span>
+                    </div>
+                    <h1 class="fade-in-up delay-200" style="font-size: 2rem; margin-top: -1rem;">
+                        Advancing Medicine Through <br>
+                        <span class="gradient-text-primary">Intelligent Tools</span>
+                    </h1>
+                    <p class="fade-in-up delay-300">
+                        Our mission is simple: reduce friction in medical workflows today, and introduce AI-driven
+                        intelligence responsibly tomorrow.
+                    </p>
 
-                <div class="fade-in-up delay-300" style="margin-top: 2rem;">
-                    <a href="#vision" class="btn btn-secondary" style="border-radius: 50px; padding: 10px 20px;">
-                        <i class="fa-solid fa-arrow-down"></i> Explore
-                    </a>
+                    <div class="fade-in-up delay-300" style="margin-top: 2rem;">
+                        <a href="#vision" class="btn btn-secondary" style="border-radius: 50px; padding: 10px 20px;">
+                            <i class="fa-solid fa-arrow-down"></i> Explore
+                        </a>
+                    </div>
                 </div>
+
+
             </div>
         </section>
 
@@ -251,6 +258,7 @@
         </footer>
     </div>
 
+    <script src="script.js"></script>
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');

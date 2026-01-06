@@ -62,6 +62,10 @@
     <div class="ambient-glow"></div>
     <div class="ambient-glow secondary"></div>
 
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+    <div class="ambient-glow secondary"></div>
+
     <div class="container">
         <!-- Simple Navigation -->
         <nav class="navbar-modern fade-in-up">
@@ -82,70 +86,228 @@
 
         <!-- App Hero -->
         <section class="hero" style="min-height: 70vh; padding-top: 4rem;">
-            <div class="hero-content">
-                <div class="fade-in-up delay-100">
-                    <span
-                        style="color: var(--secondary-color); font-weight: 600; letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase;">
-                        Available Now
-                    </span>
+            <div class="hero-container hero-centered">
+                <div class="hero-content">
+                    <div class="fade-in-up delay-100">
+                        <span
+                            style="color: var(--secondary-color); font-weight: 600; letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase;">
+                            Available Now
+                        </span>
+                    </div>
+                    <h1 class="fade-in-up delay-200">
+                        PG <span class="gradient-text-primary">PathScheduler</span>
+                    </h1>
+                    <p class="fade-in-up delay-300">
+                        The ultimate companion for medical professionals. High-yield QBank, AI explanations, and smart
+                        flashcards in one powerful app.
+                    </p>
+
+                    <!-- Download Grid -->
+                    <div class="download-grid fade-in-up delay-300" style="margin-top: 3rem;">
+                        <!-- Web Card -->
+                        <div class="glass-card download-option">
+                            <i class="fa-solid fa-globe platform-icon" style="color: #60a5fa;"></i>
+                            <h3>Web App</h3>
+                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Access instantly from any browser.</p>
+                            <a href="https://pathscheduler.pathexor.in/" class="btn-store btn-webapp">
+                                <i class="fa-solid fa-rocket"></i>
+                                <span>
+                                    <span class="small-text">Launch Web App</span>
+                                    <span class="large-text">Open in Browser</span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Android Card -->
+                        <div class="glass-card download-option"
+                            style="border-color: rgba(34, 197, 94, 0.2); background: rgba(34, 197, 94, 0.05);">
+                            <i class="fa-brands fa-android platform-icon" style="color: #4ade80;"></i>
+                            <h3>Android</h3>
+                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Install on your Android device.</p>
+                            <a href="https://play.google.com/store/apps/details?id=in.pathexor.pathscheduler"
+                                target="_blank" class="btn-store btn-playstore">
+                                <i class="fa-brands fa-google-play"></i>
+                                <span>
+                                    <span class="small-text">GET IT ON</span>
+                                    <span class="large-text">Google Play</span>
+                                </span>
+                            </a>
+                            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-secondary);">Latest
+                                Version</p>
+                        </div>
+
+                        <!-- iOS Card -->
+                        <div class="glass-card download-option">
+                            <i class="fa-brands fa-apple platform-icon" style="color: #ffffff;"></i>
+                            <h3>iOS</h3>
+                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Join the TestFlight beta.</p>
+                            <a href="#" class="btn btn-secondary" style="width: 100%; justify-content: center;">Coming
+                                Soon</a>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="fade-in-up delay-200">
-                    PG <span class="gradient-text-primary">PathScheduler</span>
-                </h1>
-                <p class="fade-in-up delay-300">
-                    The ultimate companion for medical professionals. High-yield QBank, AI explanations, and smart
-                    flashcards in one powerful app.
-                </p>
 
-                <!-- Download Grid -->
-                <div class="download-grid fade-in-up delay-300" style="margin-top: 3rem;">
-                    <!-- Web Card -->
-                    <div class="glass-card download-option">
-                        <i class="fa-solid fa-globe platform-icon" style="color: #60a5fa;"></i>
-                        <h3>Web App</h3>
-                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Access instantly from any browser.</p>
-                        <a href="https://pathscheduler.pathexor.in/" class="btn btn-secondary">Launch Web</a>
-                    </div>
 
-                    <!-- Android Card -->
-                    <div class="glass-card download-option"
-                        style="border-color: rgba(99, 102, 241, 0.4); background: rgba(99, 102, 241, 0.05);">
-                        <i class="fa-brands fa-android platform-icon" style="color: #4ade80;"></i>
-                        <h3>Android</h3>
-                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Download APK for your device.</p>
-                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download</a>
-                    </div>
-
-                    <!-- iOS Card -->
-                    <div class="glass-card download-option">
-                        <i class="fa-brands fa-apple platform-icon" style="color: #ffffff;"></i>
-                        <h3>iOS</h3>
-                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Join the TestFlight beta.</p>
-                        <a href="#" class="btn btn-secondary">Coming Soon</a>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- App Features Details -->
         <section class="features-section fade-in-up delay-300" style="margin-bottom: 4rem;">
-            <h2 style="text-align: center; margin-bottom: 3rem;">Everything you need to succeed</h2>
+            <div class="section-divider">━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+            <h2 style="text-align: center; margin-bottom: 3rem;">Complete NEET PG & INICET Preparation Platform</h2>
+            <p
+                style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; color: var(--text-secondary); line-height: 1.6;">
+                PG PathScheduler is your all-in-one study companion for medical entrance exams. Powered by AI and built
+                by doctors for doctors, this app combines a massive question bank with intelligent learning tools to
+                help you ace NEET PG, INICET, and FMGE.
+            </p>
+
             <div class="features-grid">
+                <!-- QBank -->
                 <div class="glass-card feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-list-check"></i></div>
-                    <h3>High-Yield QBank</h3>
-                    <p>Thousands of curated questions with detailed explanations.</p>
+                    <div class="feature-icon"><i class="fa-solid fa-book-medical"></i></div>
+                    <h3>Massive Question Bank</h3>
+                    <ul class="feature-list">
+                        <li>22,000+ High-Yield MCQs covering all subjects</li>
+                        <li>Subject-wise practice across 20+ medical specialties</li>
+                        <li>Topic-wise quizzes for focused learning</li>
+                        <li>Previous year questions and patterns</li>
+                        <li>Regular content updates</li>
+                        <li>Detailed explanations for every question</li>
+                    </ul>
                 </div>
+
+                <!-- Pathexor AI -->
                 <div class="glass-card feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Pathexor AI</h3>
-                    <p>Ask doubts and get instant, context-aware medical answers.</p>
+                    <div class="feature-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Pathexor AI - Your Personal Tutor</h3>
+                    <ul class="feature-list">
+                        <li>Get instant AI-powered explanations</li>
+                        <li>Ask follow-up questions in natural language</li>
+                        <li>Clarify doubts with conversational AI</li>
+                        <li>Deep-dive into complex medical concepts</li>
+                        <li>Search QBank with intelligent keyword expansion</li>
+                    </ul>
                 </div>
+
+                <!-- Study Planner -->
                 <div class="glass-card feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <h3>Flashcards</h3>
-                    <p>Spaced repetition system to master volatile topics.</p>
+                    <div class="feature-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3>Smart Study Planner</h3>
+                    <ul class="feature-list">
+                        <li>Create custom timetables with drag-and-drop</li>
+                        <li>Track daily study streaks with heatmap</li>
+                        <li>Set subject-wise goals and deadlines</li>
+                        <li>Monitor time spent on each subject</li>
+                        <li>Stay motivated with progress visualization</li>
+                    </ul>
                 </div>
+
+                <!-- Flashcards -->
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-clone"></i></div>
+                    <h3>Adaptive Flashcards</h3>
+                    <ul class="feature-list">
+                        <li>Scientifically proven Spaced Repetition System</li>
+                        <li>Auto-adjusts difficulty based on your performance</li>
+                        <li>Create subject-wise flashcard decks</li>
+                        <li>Convert notes to flashcards instantly</li>
+                        <li>Track retention and mastery levels</li>
+                    </ul>
+                </div>
+
+                <!-- Tests -->
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3>Grand Tests & Mock Exams</h3>
+                    <ul class="feature-list">
+                        <li>Full-length NEET PG pattern tests</li>
+                        <li>Custom test creator - choose subjects, topics & difficulty</li>
+                        <li>Timed mode with realistic exam simulation</li>
+                        <li>Detailed performance analysis</li>
+                        <li>Compare scores with previous attempts</li>
+                    </ul>
+                </div>
+
+                <!-- Analytics -->
+                <div class="glass-card feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Advanced Analytics</h3>
+                    <ul class="feature-list">
+                        <li>Subject-wise accuracy breakdown</li>
+                        <li>Weak topic identification</li>
+                        <li>Guessing index detection</li>
+                        <li>Fatigue pattern analysis</li>
+                        <li>Time management insights</li>
+                        <li>Rank predictor based on performance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Features Grid -->
+            <div class="section-divider">━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+            <h2 style="text-align: center; margin-bottom: 2rem;">Additional Features</h2>
+            <div class="mini-features-grid">
+                <div class="mini-feature"><i class="fa-solid fa-microphone"></i> Voice Notes</div>
+                <div class="mini-feature"><i class="fa-solid fa-image"></i> Diagram Storage</div>
+                <div class="mini-feature"><i class="fa-solid fa-bookmark"></i> Bookmarks</div>
+                <div class="mini-feature"><i class="fa-solid fa-pen-to-square"></i> Personal Notes</div>
+                <div class="mini-feature"><i class="fa-solid fa-magnifying-glass"></i> Smart Search</div>
+                <div class="mini-feature"><i class="fa-solid fa-plane"></i> Offline Access</div>
+                <div class="mini-feature"><i class="fa-solid fa-moon"></i> Dark Mode</div>
+            </div>
+
+            <!-- Perfect For & Privacy -->
+            <div class="info-grid">
+                <div class="glass-card">
+                    <h3>Perfect For</h3>
+                    <ul class="check-list">
+                        <li>NEET PG aspirants</li>
+                        <li>INICET candidates</li>
+                        <li>FMGE students</li>
+                        <li>Medical PG entrance preparation</li>
+                        <li>Self-study and revision</li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <h3>Privacy & Security</h3>
+                    <ul class="feature-list">
+                        <li>Your data is encrypted and secure</li>
+                        <li>Guest mode available - no signup required</li>
+                        <li>Delete account anytime</li>
+                        <li>No ads, no distractions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Why Choose -->
+            <div class="section-divider">━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+            <div class="glass-card highlight-card">
+                <h2 style="margin-bottom: 1.5rem; color: var(--primary-color);">Why Choose PG PathScheduler?</h2>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    Unlike generic exam prep apps, we're built specifically for medical postgraduate entrance exams. Our
+                    AI tutor understands medical terminology, our question bank is curated by doctors, and our analytics
+                    are designed around medical exam patterns.
+                </p>
+                <div style="margin-top: 2rem; font-weight: 600; font-size: 1.1rem; color: white;">
+                    Start your journey to medical excellence today!
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="section-divider">━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+            <div class="support-footer">
+                <h3>Support & Feedback</h3>
+                <p>Email: <a href="mailto:pathexor@gmail.com">pathexor@gmail.com</a></p>
+                <p>Website: <a href="https://pathscheduler.pathexor.in">pathscheduler.pathexor.in</a></p>
+                <div style="margin-top: 1.5rem; color: #fbbf24;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">If you love the app, please rate us 5 stars!</p>
             </div>
         </section>
 
@@ -155,6 +317,7 @@
         </footer>
     </div>
 
+    <script src="script.js"></script>
     <script>
         // Navbar Scroll Effect
         const navbar = document.querySelector('.navbar-modern');
