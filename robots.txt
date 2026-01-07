@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Block logos from Google Image search
+# Allow logos from Google Image search
 User-agent: Googlebot-Image
-Disallow: /assets/
+Allow: /assets/
 
 Sitemap: https://www.pathexor.in/sitemap.xml

@@ -5,6 +5,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initParticles();
+    initScrollReveal();
+    initScrollProgress();
+    initCustomCursor();
 });
 
 /**
@@ -154,6 +157,65 @@ function initParticles() {
 
     init();
     animate();
+}
+
+/**
+ * Scroll Reveal Animations
+ */
+function initScrollReveal() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-active');
+            }
+        });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.glass-card, .feature-card, section h2, .hero-content > *');
+    revealElements.forEach(el => {
+        el.classList.add('reveal-on-scroll');
+        observer.observe(el);
+    });
+}
+
+/**
+ * Scroll Progress Bar
+ */
+function initScrollProgress() {
+    const progressBar = document.createElement('div');
+    progressBar.id = 'scrollProgress';
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + "%";
+    });
+}
+
+/**
+ * Custom Cursor Glow
+ */
+function initCustomCursor() {
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('a, button, .glass-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
+    });
 }
 
 
