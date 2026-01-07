@@ -50,8 +50,6 @@
     transition: width 0.1s ease;
 }
 
-/* ... styles ... */
-
 /* Download Section */
 .download-grid {
     display: flex;
@@ -436,8 +434,6 @@ h3 {
     line-height: 1.6;
 }
 
-
-
 .platform-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -703,8 +699,6 @@ footer {
     /* Reset constraints from previous generic centering */
 }
 
-
-
 /* Desktop Hero Layout */
 @media (min-width: 1024px) {
     .hero-container {
@@ -720,8 +714,6 @@ footer {
         text-align: left;
         padding: 0;
     }
-
-
 
     .hero-content h1 {
         margin-left: 0;
@@ -820,6 +812,42 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+}
 
+/* Reveal on Scroll */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3000;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background 0.3s;
+    mix-blend-mode: screen;
+}
+
+.custom-cursor.expand {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+}
+
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none;
+    }
 }
