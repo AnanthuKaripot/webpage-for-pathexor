@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initScrollReveal();
     initScrollProgress();
-    initCustomCursor();
+    initCarousel();
 });
 
 /**
@@ -199,23 +199,56 @@ function initScrollProgress() {
     });
 }
 
+
+
 /**
- * Custom Cursor Glow
+ * Screenshot Carousel Logic
  */
-function initCustomCursor() {
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    document.body.appendChild(cursor);
+function initCarousel() {
+    const carousel = document.getElementById('appCarousel');
+    const dots = document.querySelectorAll('.dot');
+    if (!carousel || dots.length === 0) return;
 
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
+    const track = carousel.querySelector('.carousel-track');
+    
+    // Use an IntersectionObserver for more accurate active state detection
+    const observerOptions = {
+        root: carousel,
+        threshold: 0.6 // Image must be 60% visible to be considered active
+    };
 
-    document.querySelectorAll('a, button, .glass-card').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const index = Array.from(track.children).indexOf(entry.target);
+                updateDots(index);
+            }
+        });
+    }, observerOptions);
+
+    track.querySelectorAll('img').forEach(img => observer.observe(img));
+
+    function updateDots(activeIndex) {
+        dots.forEach((dot, i) => {
+            if (i === activeIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    // Scroll to image on dot click
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            const images = track.querySelectorAll('img');
+            if (images[index]) {
+                images[index].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+        });
     });
 }
-
-

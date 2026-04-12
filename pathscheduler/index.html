@@ -55,7 +55,7 @@
         content="The ultimate medical smart assistant. AI explanations, 22k+ MCQ QBank, and smart study planning.">
     <meta property="twitter:image" content="https://www.pathexor.in/assets/pathscheduler_logo.png">
 
-    <link rel="stylesheet" href="../style.css?v=5">
+    <link rel="stylesheet" href="../style.css?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -72,20 +72,23 @@
         <!-- Simple Navigation -->
         <nav class="navbar-modern fade-in-up">
             <div class="nav-container">
-                <a href="../" class="nav-back-link" aria-label="Home">
-                    <i class="fa-solid fa-house"></i>
+                <a href="../" class="brand">
+                    <img src="../assets/pathexor_logo.png" alt="Pathexor Logo">
+                    Pathexor
                 </a>
 
-                <div class="brand">
-                    <img src="../assets/pathscheduler_logo.png" alt="PathScheduler Logo">
-                    <span>PG PathScheduler</span>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <a href="#download" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">
+                        Get Started
+                    </a>
+                    <a href="links/" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;"
+                        target="_blank">
+                        Ecosystem
+                    </a>
+                    <a href="#telegram" style="color: #0088cc; font-size: 1.6rem; display: flex; align-items: center; transition: transform 0.2s; text-decoration: none; border: none;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" aria-label="Telegram Bot">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
                 </div>
-
-                <!-- Empty spacer for flexbox balance -->
-                <a href="links/" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;"
-                    target="_blank">
-                    Ecosystem
-                </a>
             </div>
         </nav>
 
@@ -93,25 +96,57 @@
         <section class="hero" style="min-height: 70vh; padding-top: 4rem;">
             <div class="hero-container hero-centered">
                 <div class="hero-content">
-                    <div class="fade-in-up delay-100">
+                    <div class="fade-in-up delay-100" style="display: flex; gap: 1rem; align-items: center; justify-content: center;">
                         <span
                             style="color: var(--secondary-color); font-weight: 600; letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase;">
                             Available Now
+                        </span>
+                        <span style="background: rgba(34, 197, 94, 0.1); color: #4ade80; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(34, 197, 94, 0.3);">
+                            100% Free
                         </span>
                     </div>
                     <h1 class="fade-in-up delay-200">
                         PG <span class="gradient-text-primary">PathScheduler</span>
                     </h1>
-                    <p class="fade-in-up delay-300">
+                    <p class="fade-in-up delay-300" style="margin-bottom: 0;">
                         The ultimate companion for medical professionals. High-yield QBank, AI explanations, and smart
                         flashcards in one powerful app.
                     </p>
+                </div>
 
+                <!-- App Screenshots Carousel (Moved outside hero-content) -->
+                <div class="screenshots-carousel-container fade-in-up delay-300" style="width: 100%;">
+                    <div class="screenshots-carousel" id="appCarousel">
+                        <div class="carousel-track">
+                            <img src="../assets/Tab/1.png" alt="PathScheduler App Screenshot 1" loading="lazy">
+                            <img src="../assets/Tab/2.png" alt="PathScheduler App Screenshot 2" loading="lazy">
+                            <img src="../assets/Tab/3.png" alt="PathScheduler App Screenshot 3" loading="lazy">
+                            <img src="../assets/Tab/4.png" alt="PathScheduler App Screenshot 4" loading="lazy">
+                            <img src="../assets/Tab/5.png" alt="PathScheduler App Screenshot 5" loading="lazy">
+                            <img src="../assets/Tab/6.png" alt="PathScheduler App Screenshot 6" loading="lazy">
+                            <img src="../assets/Tab/7.png" alt="PathScheduler App Screenshot 7" loading="lazy">
+                            <img src="../assets/Tab/8.png" alt="PathScheduler App Screenshot 8" loading="lazy">
+                        </div>
+                    </div>
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-dots" id="carouselDots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                        <span class="dot" data-index="5"></span>
+                        <span class="dot" data-index="6"></span>
+                        <span class="dot" data-index="7"></span>
+                    </div>
+                </div>
+
+                <div class="hero-content">
                     <!-- Download Grid -->
-                    <div class="download-grid fade-in-up delay-300" style="margin-top: 3rem;">
+                    <div id="download" class="download-grid fade-in-up delay-300" style="margin-top: 2rem; scroll-margin-top: 100px;">
                         <!-- Web Card -->
                         <div class="glass-card download-option">
-                            <i class="fa-solid fa-globe platform-icon" style="color: #60a5fa;"></i>
+                            <img src="../assets/pathscheduler_logo.png" alt="PathScheduler Web" class="platform-icon" style="width: 3.5rem; height: 3.5rem; border-radius: 12px; object-fit: contain; margin-bottom: 0.5rem;">
                             <h3>Web App</h3>
                             <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Access instantly from any browser.</p>
                             <a href="https://pathscheduler.pathexor.in/" class="btn-store btn-webapp" target="_blank">
@@ -283,6 +318,30 @@
                         <li>No ads, no distractions</li>
                     </ul>
                 </div>
+            </div>
+
+            <!-- Telegram Bot -->
+            <div class="section-divider">━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+            <div id="telegram" class="glass-card highlight-card" style="border-color: rgba(0, 136, 204, 0.3); background: rgba(0, 136, 204, 0.05); scroll-margin-top: 100px;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <i class="fa-brands fa-telegram" style="font-size: 2.5rem; color: #0088cc;"></i>
+                    <h2 style="color: white; margin: 0;">Interactive Telegram Bot</h2>
+                </div>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+                    Supercharge your preparation and challenge your friends right from your favorite messaging app. Everything is <strong>100% FREE!</strong> No catches.
+                </p>
+                <div style="text-align: left; max-width: 600px; margin: 0 auto 2rem auto;">
+                    <ul class="feature-list" style="color: var(--text-secondary);">
+                        <li><strong>Daily Flashcards:</strong> Quick NEET PG mastery!</li>
+                        <li><strong>Weekly Quizzes + Leaderboard:</strong> Compete & climb the ranks!</li>
+                        <li><strong>Custom Quizzes:</strong> Create via the app and share to challenge friends here.</li>
+                        <li><strong>Daily Practice:</strong> One high-yield MCQ daily in the channel.</li>
+                        <li><strong>Free App Access:</strong> Direct links to QBank, flashcards, brain maps & AI tutor.</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/neet_pg_pathscheduler_quizbot" target="_blank" class="btn btn-primary" style="background: #0088cc; border-color: #0088cc;">
+                    <i class="fa-brands fa-telegram"></i> Join Telegram Bot
+                </a>
             </div>
 
             <!-- Why Choose -->
