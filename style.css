@@ -915,4 +915,95 @@ footer {
     }
 }
 
+/* Rating Badge & Rating Pill (Box-less & Standout) */
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    backdrop-filter: none;
+}
+
+.rating-badge img.rating-svg-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.25));
+}
+
+.rating-badge:hover img.rating-svg-icon {
+    transform: scale(1.15) rotate(3deg);
+    filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.6));
+}
+
+.rating-badge span {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.rating-badge:hover span {
+    color: var(--text-primary);
+}
+
+.rating-pill {
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.rating-pill img.rating-svg-icon {
+    width: 25px !important;
+    height: 25px !important;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.25));
+}
+
+.link-card:hover .rating-pill img.rating-svg-icon {
+    transform: scale(1.18) rotate(4deg);
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+}
+
+.rating-pill span {
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: var(--text-secondary) !important;
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover .rating-pill span {
+    color: var(--text-primary) !important;
+    opacity: 0.8;
+}
+
+.rating-svg-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
 
