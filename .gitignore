@@ -1,0 +1,16 @@
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Common static-site build output
+dist/
+build/
+node_modules/
+
+# Local environment files
+.env
+.env.*
+!.env.example
