@@ -8,6 +8,9 @@
     <meta name="description"
         content="Pathexor - Official site for Pathexor. Advancing medicine through intelligent, clinician-first tools. Explore PG PathScheduler and our vision for ethical medical AI.">
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.pathexor.in/">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.pathexor.in/">
@@ -81,7 +84,7 @@
                 </a>
 
                 <div class="nav-links" id="navLinks">
-                    <a href="./" class="active">Home</a>
+                    <a href="#" class="active">Home</a>
                     <a href="#vision">Vision</a>
                     <a href="#roadmap">Roadmap</a>
                     <a href="pathscheduler/">PG PathScheduler</a>
@@ -257,16 +260,64 @@
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>Pathexor — building the path forward for medicine.</p>
-            <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 2rem;">
-                <a href="privacy.html"
-                    style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem;">Privacy Policy</a>
-                <a href="terms.html"
-                    style="color: var(--text-secondary); text-decoration: none; font-size: 0.8rem;">Terms of Service</a>
+        <!-- Who Built Pathexor -->
+        <section class="fade-in-up delay-300" style="padding: 4rem 0; text-align: center;">
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto; padding: 3rem;">
+                <h2 style="margin-bottom: 1.5rem;">
+                    Built by a <span class="gradient-text-primary">Doctor</span>
+                </h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                    Pathexor is proudly built by a solo developer who is also a doctor (MBBS) and currently a Pathology resident. Being on the frontlines of medicine means we understand the exact pain points medicos face. By developing these tools completely in-house, we ensure that the focus remains entirely on delivering the best, most practical solutions for medical professionals—built by a doctor, for doctors.
+                </p>
             </div>
-            <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Pathexor. All rights reserved.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer style="padding: 4rem 0 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 4rem;">
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; padding: 0 1rem; text-align: left;">
+                <!-- Brand Column -->
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <div class="brand" style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; justify-content: flex-start;">
+                        <img src="assets/pathexor_logo.png" alt="Pathexor Logo" style="width: 30px; height: 30px;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: white;">Pathexor</span>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; text-align: left; margin: 0;">
+                        Building the path forward for medicine with intelligent, clinician-first tools.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <h4 style="color: white; margin-bottom: 1.2rem; font-size: 1.1rem; text-align: left; width: 100%;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
+                        <li><a href="index.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Home</a></li>
+                        <li><a href="pathscheduler/" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">PG PathScheduler</a></li>
+                        <li><a href="#vision" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Our Vision</a></li>
+                        <li><a href="#roadmap" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Roadmap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <h4 style="color: white; margin-bottom: 1.2rem; font-size: 1.1rem; text-align: left; width: 100%;">Connect</h4>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <a href="https://www.instagram.com/neetpgpathscheduler" target="_blank" style="color: var(--text-secondary); font-size: 1.5rem; transition: color 0.2s;" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='var(--text-secondary)'"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://t.me/neet_pg_pathscheduler_quizbot" target="_blank" style="color: var(--text-secondary); font-size: 1.5rem; transition: color 0.2s;" onmouseover="this.style.color='#229ED9'" onmouseout="this.style.color='var(--text-secondary)'"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.youtube.com/@PGPathScheduler" target="_blank" style="color: var(--text-secondary); font-size: 1.5rem; transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='var(--text-secondary)'"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <button onclick="openContactModal()" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; border: none; background: rgba(255, 255, 255, 0.1);">
+                        <i class="fa-regular fa-envelope"></i> <span class="btn-text">Contact Us</span>
+                    </button>
+                </div>
+            </div>
+
+            <div style="max-width: 1200px; margin: 3rem auto 0 auto; padding: 2rem 1rem 0 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">&copy; 2026 Pathexor. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">Privacy Policy</a>
+                    <a href="terms.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">Terms of Service</a>
+                </div>
+            </div>
         </footer>
     </div>
 
@@ -298,7 +349,73 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // Highlight Active Nav Link based on Scroll
+        const sections = document.querySelectorAll("section[id]");
+        const navItems = document.querySelectorAll(".nav-links a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove("active");
+                if (item.getAttribute("href").includes(current) && current !== "") {
+                    item.classList.add("active");
+                } else if (current === "" && item.getAttribute("href") === "#") {
+                    item.classList.add("active"); // default to home if at top
+                }
+            });
+        });
+        // Contact Modal Logic
+        function openContactModal() {
+            document.getElementById('contactModal').classList.add('show');
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.remove('show');
+        }
+
+        function copyModalEmail() {
+            const email = document.getElementById('modalEmailText').innerText;
+            navigator.clipboard.writeText(email).then(() => {
+                const copyBtn = document.getElementById('modalCopyBtn');
+                const icon = copyBtn.querySelector('i');
+
+                // Change UI to show success
+                icon.className = "fa-solid fa-check";
+                copyBtn.style.background = "rgba(34, 197, 94, 0.2)";
+                copyBtn.style.color = "#4ade80";
+
+                // Revert back after 2 seconds
+                setTimeout(() => {
+                    icon.className = "fa-regular fa-copy";
+                    copyBtn.style.background = "rgba(255, 255, 255, 0.1)";
+                    copyBtn.style.color = "white";
+                }, 2000);
+            });
+        }
     </script>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="close-modal" onclick="closeContactModal()"><i class="fa-solid fa-xmark"></i></button>
+            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Contact Us</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">Drop us an email, and we'll get back to you as soon as possible!</p>
+            <div class="email-copy-box">
+                <span id="modalEmailText">pathexor@gmail.com</span>
+                <button onclick="copyModalEmail()" class="modal-copy-btn" id="modalCopyBtn" title="Copy Email">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
